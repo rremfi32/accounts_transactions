@@ -6,7 +6,7 @@ connection to db. For example, DATABASE_URL=postgresql://user:password@localhost
 2. Run $composer update and $composer install for dependency injection in project
 3. Execute migrations in src/Migrations
 4. Run server - execute $symfony server:start.
-5. Run command app:import-accounts import/accounts.csv or use your file with this kind
+5. Run command $symfony app:import-accounts import/accounts.csv or use your file with this kind
    of file structure
 6. Perform testing, link to api method - your_host:port/transaction   
 
