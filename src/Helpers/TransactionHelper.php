@@ -40,8 +40,9 @@ class TransactionHelper
         $crawler = $crawler->filter($type);
 
         $amount = $crawler->attr("amount");
-        $tid = $crawler->attr("tid");
-        $uid = $crawler->attr("uid");
+        $amount = filter_var($amount,FILTER_VALIDATE_INT) ? intval($amount) : 0;
+        $tid = htmlspecialchars($crawler->attr("tid"));
+        $uid = htmlspecialchars($crawler->attr("uid"));
 
         $account = $this->accountRepository->findOneBy(["uid" => $uid]);
         if (!$account)

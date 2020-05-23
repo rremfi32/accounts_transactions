@@ -22,13 +22,13 @@ class Transaction
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\PositiveOrZero
+     * @Assert\Positive
      */
     private $amount;
 
     /**
      * @ORM\Column(type="string", length=32, unique=true)
-     * @Assert\Length(min=1, max=32)
+     * @Assert\Length(min=12, max=32)
      */
     private $tid;
 
